@@ -154,7 +154,7 @@ export function OrderList() {
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
             {singleOrder && (
-                <div style={{ background: '#000', padding: 10, marginBottom: 10 }}>
+                <div style={{ color: 'white', background: '#000', padding: 10, marginBottom: 10 }}>
                     <strong>Поръчка #{singleOrder.id}</strong><br />
                     Клиент: {singleOrder.customerName}<br />
                     Сума: {singleOrder.totalAmount.toFixed(2)} лв<br />
@@ -196,7 +196,7 @@ export function OrderList() {
                             <th onClick={() => handleSort('id')}>ID</th>
                             <th onClick={() => handleSort('customerName')}>Клиент</th>
                             <th onClick={() => handleSort('totalAmount')}>Сума</th>
-                            <th>Дата</th>
+                            <th onClick={() => handleSort('createdAt')}>Дата</th>
                             <th>Действия</th>
                         </tr>
                     </thead>
