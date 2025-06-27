@@ -136,7 +136,7 @@ export function OrderList() {
     });
 
     return (
-        <div style={{ padding: 20 }}>
+        <div style={{ padding: 20, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h2>Поръчки</h2>
             <button onClick={fetchOrders}>🔄 Обнови поръчките</button>
 
@@ -200,7 +200,7 @@ export function OrderList() {
                             <th>Действия</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody> 
                         {sortedOrders.map(order => (
                             <OrderRow
                                 key={order.id}
